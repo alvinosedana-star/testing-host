@@ -1,0 +1,318 @@
+/* ========================================
+   VALENTINE THEME - ATTRACTIVE & BEAUTIFUL
+   ======================================== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ff9a9e 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    color: #2d3436;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   FLOATING HEARTS BACKGROUND
+   ======================================== */
+.hearts-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart-bg {
+    position: absolute;
+    font-size: 2em;
+    color: rgba(255, 105, 180, 0.4);
+    animation: floatHeart 10s ease-in-out infinite;
+    opacity: 0;
+}
+
+.heart-bg:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart-bg:nth-child(2) { left: 20%; animation-delay: 2s; }
+.heart-bg:nth-child(3) { left: 30%; animation-delay: 4s; }
+.heart-bg:nth-child(4) { left: 40%; animation-delay: 1s; }
+.heart-bg:nth-child(5) { left: 50%; animation-delay: 3s; }
+.heart-bg:nth-child(6) { left: 60%; animation-delay: 5s; }
+.heart-bg:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+.heart-bg:nth-child(8) { left: 80%; animation-delay: 1.5s; }
+.heart-bg:nth-child(9) { left: 90%; animation-delay: 3.5s; }
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   MAIN CONTAINER
+   ======================================== */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Glassmorphism Card */
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 
+        0 8px 32px rgba(255, 105, 180, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   TITLE STYLING
+   ======================================== */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5em;
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(233, 30, 99, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ========================================
+   HEART ANIMATION
+   ======================================== */
+.heart {
+    font-size: 6em;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.6));
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.15); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.15); }
+    70% { transform: scale(1); }
+}
+
+/* ========================================
+   CAT SVG STYLING
+   ======================================== */
+.cat-svg {
+    width: 180px;
+    height: 180px;
+    margin: 30px auto;
+    display: block;
+    animation: bounce 3s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.cat-svg:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* ========================================
+   MESSAGE STYLING
+   ======================================== */
+.message {
+    font-size: 1.3em;
+    line-height: 1.8;
+    text-align: center;
+    color: #636e72;
+    margin: 30px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 218, 185, 0.3));
+    border-radius: 20px;
+    border-left: 4px solid #e91e63;
+}
+
+/* ========================================
+   BUTTON STYLING
+   ======================================== */
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e91e63, #ff4081);
+    color: white;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 10px 30px rgba(233, 30, 99, 0.4),
+        0 0 0 0 rgba(233, 30, 99, 0.7);
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #ff4081, #e91e63);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 40px rgba(233, 30, 99, 0.5),
+        0 0 0 5px rgba(233, 30, 99, 0.2);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   AUDIO PLAYER STYLING
+   ======================================== */
+audio {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+audio::-webkit-media-controls-panel {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(255, 105, 180, 0.1));
+}
+
+/* ========================================
+   DECORATIVE ELEMENTS
+   ======================================== */
+.decoration {
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.6;
+}
+
+.decoration-left {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-15deg);
+    animation: swing 3s ease-in-out infinite;
+}
+
+.decoration-right {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg);
+    animation: swing 3s ease-in-out infinite reverse;
+}
+
+@keyframes swing {
+    0%, 100% { transform: translateY(-50%) rotate(-15deg); }
+    50% { transform: translateY(-50%) rotate(15deg); }
+}
+
+/* Sparkle Effect */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: gold;
+    border-radius: 50%;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
+    
+    .cat-svg {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .message {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+    
+    .button {
+        padding: 15px 35px;
+        font-size: 1em;
+    }
+}
